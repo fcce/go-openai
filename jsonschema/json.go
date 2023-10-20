@@ -34,6 +34,10 @@ type Definition struct {
 	Required []string `json:"required,omitempty"`
 	// Items specifies which data type an array contains, if the schema type is Array.
 	Items *Definition `json:"items,omitempty"`
+	// MaxContains specifies the maximum number of elements in an array that can match the schema.
+	MaxContains int `json:"maxContains,omitempty"`
+	// MinContains specifies the minimum number of elements in an array that can match the schema.
+	MinContains int `json:"minContains,omitempty"`
 }
 
 func (d Definition) MarshalJSON() ([]byte, error) {
