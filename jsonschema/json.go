@@ -46,6 +46,10 @@ type Definition struct {
 	// additionalProperties: false
 	// additionalProperties: jsonschema.Definition{Type: jsonschema.String}
 	AdditionalProperties any `json:"additionalProperties,omitempty"`
+	// MaxContains specifies the maximum number of elements in an array that can match the schema.
+	MaxContains int `json:"maxContains,omitempty"`
+	// MinContains specifies the minimum number of elements in an array that can match the schema.
+	MinContains int `json:"minContains,omitempty"`
 }
 
 func (d *Definition) MarshalJSON() ([]byte, error) {
