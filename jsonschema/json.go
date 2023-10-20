@@ -48,6 +48,8 @@ type Definition struct {
 	AdditionalProperties any `json:"additionalProperties,omitempty"`
 	// Whether the schema is nullable or not.
 	Nullable bool `json:"nullable,omitempty"`
+	// MaxContains specifies the maximum number of elements in an array that can match the schema.
+	MinContains int `json:"minContains,omitempty"`
 }
 
 func (d *Definition) MarshalJSON() ([]byte, error) {
