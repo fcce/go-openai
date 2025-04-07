@@ -263,6 +263,13 @@ type ChatCompletionRequest struct {
 	ReasoningEffort string `json:"reasoning_effort,omitempty"`
 	// Metadata to store with the completion.
 	Metadata map[string]string `json:"metadata,omitempty"`
+	// The prediction to use for the completion.
+	Prediction *Prediction `json:"prediction,omitempty"`
+}
+
+type Prediction struct {
+	Type    string `json:"type,omitempty"`
+	Content string `json:"content,omitempty"`
 }
 
 type StreamOptions struct {
